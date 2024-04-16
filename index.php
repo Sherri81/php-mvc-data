@@ -19,10 +19,10 @@ spl_autoload_register( function (string $class_name) {
 $router = new Framework\Router;
 
 // begin adding routes to the $routes array
-$router->add("/webdev/RickJames/php-mvc-routing", ["controller" => "home", "action" => "index"]);
-$router->add("/products", ["controller" => "products", "action" => "index"]);
-$router->add("/products/show", ["controller" => "products", "action" => "show"]);
-
+// $router->add("/webdev/RickJames/php-mvc-routing", ["controller" => "home", "action" => "index"]);
+// $router->add("/products", ["controller" => "products", "action" => "index"]);
+// $router->add("/products/show", ["controller" => "products", "action" => "show"]);
+$router->add("/{controller}/{action}")
 // call to matchRoute() to return an array of $params from $routes
 $params = $router->matchRoute($path);
 
